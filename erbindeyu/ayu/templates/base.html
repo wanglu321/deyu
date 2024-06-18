@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>尔滨的雨</title>
+    <meta charset="utf-8"/>
+    <meta name="description" content="尔滨的雨是一家音乐摄影视频网站，这里有全宇宙最帅最酷最牛逼唱歌最好听的刘田雨" />
+    <meta name="keywords" content="尔滨的雨 音乐 视频 摄影 分享 心情 电台 翻唱"/>
+    <!-- Include your CSS files here -->
+    <link
+      rel="preload"
+      as="style"
+      href="{% static 'css/style.css' %}"
+      onload="this.rel = 'stylesheet'"
+    />
+</head>
+<body>
+    <!--Header content-->
+    {% include 'partials/_header.html' %}
+    <main>{% block content %} {% endblock %}</main>
+
+     <!--Footer content-->
+    {% include 'partials/_footer.html' %}
+</body>
+
+</html>
