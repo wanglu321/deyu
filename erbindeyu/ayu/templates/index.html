@@ -1,2 +1,62 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block content %}
+<section>
+    <article id="hero">
+      <h1 class="heading_shadow">一种心情，一段故事</h1>
+      <p>
+    
+      </p>
+      <a href="{% url 'music' %}" class="cta">听一听</a>
+    </article>
+  </section>
+  <section>
+    <article>
+      <h2>旋律</h2>
+      <img src="{% static 'img/musica.jpeg' %}">
+      <p>
+        音乐是一种态度，用心去听，去体会，去感悟，去聆听别人的故事
+      </p>
+      <p>
+        <a href="{% url 'music' %}">听歌</a>
+      </p>
+    </article>
+    <article>
+      <h2>记录</h2>
+      <img src="{% static 'img/vloga.jpeg' %}">
+      <p>
+        时光不会停留，生活已经乱七八糟了，别丢失了那份小快乐
+      </p>
+      <p>
+        <a href="{% url 'vlog' %}">放松</a>
+      </p>
+    </article>
+    <article>
+      <h2>照片</h2>
+      <img src="{% static 'img/photoa.jpeg' %}">
+      <p>
+        风景一直在那里，拍的只是你的心情，这是时间的见证
+      </p>
+      <p>
+        <a href="{% url 'photo' %}">心情</a>
+      </p>
+    </article>
+  </section>
+
+  <section>
+    <article>
+      <h2>想对我说。。。</h2>
+      <!--Begin row-->
+      <div class="row">
+        <!--Begin col-->
+        
+          <form action="" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" id="button" value="发送">
+          </form>
+        </div>
+    </article>
+</section>
+{% endblock %}

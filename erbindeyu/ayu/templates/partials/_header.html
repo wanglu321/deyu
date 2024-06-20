@@ -1,14 +1,12 @@
 {% load static %}
 <header>
-
-    <img src="{% static 'img/logo.png' %}" />
-    <h1>尔滨的雨</h1>
+  <a href="{% url 'home' %}"><img src="{% static 'img/logo_new.jpeg' %}" /></a>
 </header>
 <nav>
-    <ul>
-        <li><a href="{% url 'home' %}">主页</a></li>
-        
-       
-        
-    </ul>
-</nav> 
+  <ul>
+    <li><a href="{% url 'home' %}">主页</a></li>
+    <li><a href="{% url 'music' %}">音乐</a></li>
+    <li><a href="{% url 'vlog' %}">视频</a></li>
+    <li><a href="{% url 'photo' %}">摄影</a></li>
+  </ul>
+</nav>
