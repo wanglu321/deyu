@@ -7,4 +7,5 @@ urlpatterns = [
     path('vlog/', views.vlog, name="vlog"),
     # Add the remaining URL path configurations here
     path('photo/', views.photo, name="photo"),
+    path('love/', views.love, name="love"),
 ]

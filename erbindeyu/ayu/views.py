@@ -21,3 +21,6 @@ def vlog(request):
 
 def photo(request):
     return render(request, 'photo.html')
+
+def love(request):
+    return render(request, 'love.html')
